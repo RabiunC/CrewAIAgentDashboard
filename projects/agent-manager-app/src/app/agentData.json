@@ -1,0 +1,13 @@
+{
+    "agents":
+     [
+            {"id": "agent-001", "name": "Research Specialist", "status": "Idle", "tasks_completed": 5},
+            {"id": "agent-002", "name": "Content Writer", "status": "Running", "tasks_completed": 2},
+            {"id": "agent-003", "name": "Data Analyst", "status": "Error", "tasks_completed": 8},
+            {"id": "agent-004", "name": "Task Orchestrator", "status": "Idle", "tasks_completed": 12}
+     ]
+    
+}
+    
+    
+    

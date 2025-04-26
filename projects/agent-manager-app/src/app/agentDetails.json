@@ -1,0 +1,31 @@
+{
+       "agentDetails":
+       [
+       {
+                     "id": "agent-002",
+                     "name": "Content Writer",
+                     "status": "Running",
+                     "tasks_completed": 2,
+                     "current_task": "Drafting blog post about AI ethics.",
+                     "logs": [
+                     "Task started at 2025-04-26 10:00:00",
+                     "Fetching research data...",
+                     "Writing first draft..."
+                     ],
+                     "capabilities": ["Writing", "Summarization", "Research"]
+       },
+       {
+              "id": "agent-001",
+              "name": "Software Engineer",
+              "status": "On Break",
+              "tasks_completed": 3,
+              "current_task": "Drafting blog post about AI ethics.",
+              "logs": [
+              "Task started at 2025-04-26 10:00:00",
+              "Fetching research data...",
+              "Writing first draft..."
+              ],
+              "capabilities": ["Writing", "Summarization", "Research"]
+       }
+       ]
+}
