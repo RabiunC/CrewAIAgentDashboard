@@ -3,8 +3,8 @@ import { AgentService } from '../agent.service';
 import { delay } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-dashboard',
-  template: `  
+    selector: 'app-dashboard',
+    template: `  
     <h5>Dashboard</h5>
     &nbsp;
     <div class="input-group input-group-sm mb-3">
@@ -54,7 +54,8 @@ import { delay } from 'rxjs/operators';
           </div>
     </div>
   `,
-  styles: '',
+    styles: '',
+    standalone: false
 })
 export class DashboardComponent implements OnInit {
 
@@ -71,7 +72,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(){
     this.loading = true;
 
-    this.aService.getAllAgents().pipe(delay(2000)).subscribe(res => {
+    this.aService.getAllAgents().pipe(delay(2500)).subscribe(res => {
       if(res){
         this.loading = false;
         this.agentList = res;

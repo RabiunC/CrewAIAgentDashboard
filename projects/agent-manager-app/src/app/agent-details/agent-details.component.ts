@@ -3,8 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AgentService } from '../agent.service';
 
 @Component({
-  selector: 'app-agent-details',
-  template: ` 
+    selector: 'app-agent-details',
+    template: ` 
     <h5>Agent Details</h5>
     &nbsp;
 
@@ -45,7 +45,7 @@ import { AgentService } from '../agent.service';
     </p>
     <br/>
     <button type="button" class="btn btn-outline-dark" (click)="back()">Back</button>
-    <button type="button" class="btn btn-primary" style="float:right" (click)="dispatchTask()">Dispatch New Task</button>
+    <button type="button" class="btn btn-primary" style="float:right" [disabled]="dispatchBtn" (click)="dispatchTask()">Dispatch New Task</button>
 
 
     <div *ngIf="successAlert">
@@ -59,7 +59,8 @@ import { AgentService } from '../agent.service';
       </alert>
     </div>
   `,
-  styles: ''
+    styles: '',
+    standalone: false
 })
 export class AgentDetailsComponent {
 
@@ -69,7 +70,8 @@ export class AgentDetailsComponent {
   message: string | null = null;
   isAlert: boolean =  false;
   successAlert: boolean =  false;
-  timeout: number = 4000;
+  dispatchBtn: boolean = false;
+  timeout: number = 3000;
 
   constructor(private ar: ActivatedRoute, private router: Router, private aService: AgentService){
   }
@@ -78,7 +80,10 @@ export class AgentDetailsComponent {
     this.id = this.ar.snapshot.params['id'];
     //console.log(this.id);    
     this.data = this.aService.getbyId(this.id);
+    if(!(this.data && this.data.length > 0)){
+      this.dispatchBtn = true;
     //console.log(this.data[0]);
+    }
   }
 
   dispatchTask() {

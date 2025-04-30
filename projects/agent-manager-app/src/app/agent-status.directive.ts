@@ -1,7 +1,8 @@
 import { Directive, ElementRef, Input, Renderer2, OnChanges } from '@angular/core';
 
 @Directive({
-  selector: '[agentStatus]'
+    selector: '[agentStatus]',
+    standalone: false
 })
 export class AgentStatusDirective implements OnChanges {
   @Input() agentStatus!: string;

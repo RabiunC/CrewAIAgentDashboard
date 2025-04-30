@@ -25,7 +25,7 @@ This app allows users to view a list of AI agents, see their details, filter the
 
 
 LOOM VIDEO LINK:
-https://www.loom.com/share/f83d208824d64693985ca514b8e221b4?sid=af1548f4-da37-47bf-af88-dba0587bd158
+https://www.loom.com/share/b7d46e0c6c774dc7bb37ea96a076bf65?sid=2003fe79-a634-4f1f-9b0f-6486711f1fc1
 
 
 Contributing
