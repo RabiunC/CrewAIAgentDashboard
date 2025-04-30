@@ -15,7 +15,10 @@ import { delay } from 'rxjs/operators';
     </div>   
     <br/>
     <br/>
+<<<<<<< HEAD
     <div *ngIf="agentList && agentList.length > 0">
+=======
+>>>>>>> defe82f4ed565b6b4dc63573e02f560168353ad3
     <table class="table">
       <thead>
         <tr>
@@ -35,6 +38,7 @@ import { delay } from 'rxjs/operators';
         </tr>       
       </tbody>
     </table>
+<<<<<<< HEAD
     <br/>
     <br/> 
     <alert type="success" [dismissOnTimeout]="timeout" [dismissible]="dismissible">
@@ -53,11 +57,17 @@ import { delay } from 'rxjs/operators';
             <progressbar [value]="80" [striped]="true">Loading</progressbar>
           </div>
     </div>
+=======
+    <div *ngIf="loading">
+      <mat-progress-spinner mode="indeterminate" color="primary"></mat-progress-spinner>
+    </div>    
+>>>>>>> defe82f4ed565b6b4dc63573e02f560168353ad3
   `,
   styles: '',
 })
 export class DashboardComponent implements OnInit {
 
+<<<<<<< HEAD
  
   agentList: any = [];
   filterby: any = '';
@@ -77,6 +87,20 @@ export class DashboardComponent implements OnInit {
         this.agentList = res;
         //console.log(res);     
       }       
+=======
+  agentList: any = [];
+  filterby: any = '';
+  loading: boolean = false;
+
+  constructor(private aService: AgentService){}
+
+  ngOnInit(){
+    this.loading = true;
+    this.aService.getAllAgents().pipe(delay(3000)).subscribe(res => {
+      this.loading = false;
+      this.agentList = res;
+      //console.log(res);
+>>>>>>> defe82f4ed565b6b4dc63573e02f560168353ad3
     })
   }
 }

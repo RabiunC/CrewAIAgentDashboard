@@ -25,7 +25,11 @@ export class AgentService {
     const aDetails = this.getbyId(id);
     const success = Math.random() > 0.5;
     if (success) {
+<<<<<<< HEAD
       this.message = `Task dispatched Successfully for ${aDetails[0].name}`;
+=======
+      this.message = `Task dispatched successfully for ${aDetails[0].name}`;
+>>>>>>> defe82f4ed565b6b4dc63573e02f560168353ad3
     } else {
       this.message = `Failed to dispatch task for ${aDetails[0].name}`;     
     }    

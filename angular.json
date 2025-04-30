@@ -37,8 +37,11 @@
               }
             ],
             "styles": [
+<<<<<<< HEAD
               "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+=======
+>>>>>>> defe82f4ed565b6b4dc63573e02f560168353ad3
               "@angular/material/prebuilt-themes/azure-blue.css",
               "projects/agent-manager-app/src/styles.css"
             ],
@@ -107,4 +110,8 @@
       }
     }
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> defe82f4ed565b6b4dc63573e02f560168353ad3

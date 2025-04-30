@@ -30,6 +30,7 @@ import { AgentService } from '../agent.service';
           </ul>
         </li>
       </ul>
+<<<<<<< HEAD
       </div>      
       <br/>
       <br/> 
@@ -58,6 +59,14 @@ import { AgentService } from '../agent.service';
             <strong>{{message}}.!</strong>
       </alert>
     </div>
+=======
+      </div>
+    </div>
+    <p *ngIf="!(data && data.length > 0)">No agent record is available.</p>
+    <br/>
+    <button type="button" class="btn btn-outline-dark" (click)="back()">Back</button>
+    <button type="button" class="btn btn-primary" style="float:right" (click)="dispatchTask()">Dispatch New Task</button>
+>>>>>>> defe82f4ed565b6b4dc63573e02f560168353ad3
   `,
   styles: ''
 })
@@ -65,6 +74,7 @@ export class AgentDetailsComponent {
 
   id: any;
   data: any; 
+<<<<<<< HEAD
   dismissible: boolean =  true;
   message: string | null = null;
   isAlert: boolean =  false;
@@ -74,6 +84,12 @@ export class AgentDetailsComponent {
   constructor(private ar: ActivatedRoute, private router: Router, private aService: AgentService){
   }
   
+=======
+  message: string | null = null;
+
+  constructor(private ar: ActivatedRoute, private router: Router, private aService: AgentService){}
+
+>>>>>>> defe82f4ed565b6b4dc63573e02f560168353ad3
   ngOnInit(){        
     this.id = this.ar.snapshot.params['id'];
     //console.log(this.id);    
@@ -83,6 +99,7 @@ export class AgentDetailsComponent {
 
   dispatchTask() {
     if(this.data && this.data.length > 0){
+<<<<<<< HEAD
         let res = this.aService.taskDispatch(this.id);
   
           if(res.includes('Successfully')){
@@ -95,6 +112,14 @@ export class AgentDetailsComponent {
             this.isAlert = true;
           }
       }
+=======
+    this.message = this.aService.taskDispatch(this.id)
+    alert(this.message);
+    }
+    else{
+      alert("Action Failed");
+    }
+>>>>>>> defe82f4ed565b6b4dc63573e02f560168353ad3
   }
 
   back(){
